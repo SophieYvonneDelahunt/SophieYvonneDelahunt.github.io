@@ -11,17 +11,30 @@
     <!--Bootstrap Integration-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
 </head>
-<body>
-    <header id="top" class="bg-dark p-3">
-        <div class="text-end">
+<body id="container">
+    <header id="top" class="row bg-dark p-3">
+        <div class="col-1 col-lg-11">
+            <div class="container-fluid">
+                <div class="d-flex align-items-start text-light">
+                            <a class="nav-link px-3" href="#summary">Summary</a>
+                            <a class="nav-link px-3" href="#skills">Skills</a>
+                            <a class="nav-link px-3" href="#projects">Projects</a>
+                            <a class="nav-link px-3" href="#hobbies">Creative Pursuits</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1 text-end">
             <a class="btn btn-outline-light" href="./assets/resume_sophie_delahunt.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
         </div>
     </header>
-    <div class="p-3 m-1 text-danger border border-danger text-center bg-light">If you can read this, this website is not yet done!</div>
-    <main class="container my-2 p-1">
+    <!--
+        <div class="p-3 m-1 text-danger border border-danger text-center bg-light">If you can read this, this website is not yet done!</div>
+    -->
+    <main id="summary" class="container my-2 p-1">
         <!--Summary Block-->
-        <div>
+        <div class="border border-dark rounded bg-dark text-light p-4">
             <p>Welcome! My name is—</p>
             <p class="h1">Sophie Delahunt</p>
             <p class="h5 mb-4">Software Developer</p>
@@ -30,21 +43,144 @@
                     <p>I'm Sophie Delahunt, a student of Mohawk College studying how to make exciting software that solves unconventional problems.</p>
                     <p>When I'm not plugging away at code, you'll either find me working on one of my stories, brainstorming some worldbuilding concepts, or buried up to my elbows in the side of my computer.</p>
                 </div>
+                <a class="link-offset-2" href="javascript:location='mailto:\u0073\u006f\u0070\u0068\u0069\u0065\u0079\u0076\u006f\u006e\u006e\u0065\u0064\u0065\u006c\u0061\u0068\u0075\u006e\u0074\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0">Contact - Sophie Delahunt (Email)</a>
+            </div>
+        </div>
+        <!--Education & Skills Block-->
+        <div id="skills" class="border border-dark rounded bg-dark text-light my-2 p-4" data-bs-theme="dark">
+            <p class="h5 mb-4">Skills & Education</p>
+            <div class="card card-body bg-dark">
+                <p>
+                    <a class="link-offset-2" href="https://www.mohawkcollege.ca/" target="_blank">Mohawk College</a>
+                        > Computer Systems Technology - Software Development
+                </p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-dark text-light">GPA of 92.9</li>
+                </ul>
+            </div>
+            <div class="row p-2">
+                <p class="h6 my-4">Languages</p>
+                <div class="col-lg-6 p-2">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">HTML/CSS</li>
+                        <li class="list-group-item">JavaScript</li>
+                        <li class="list-group-item">Python</li>
+                        <li class="list-group-item">Java</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 p-2">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">C#</li>
+                        <li class="list-group-item">PHP</li>
+                        <li class="list-group-item">SQL</li>
+                    </ul>
+                </div>
+                <p class="h6 my-4">Tools & Frameworks</p>
+                <div class="col-lg-6 p-2">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">GitHub</li>
+                        <li class="list-group-item">React</li>
+                        <li class="list-group-item">WordPress</li>
+                        <li class="list-group-item">Microsoft Azure</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--Projects Block-->
+        <div id="projects" class="border border-dark rounded bg-dark text-light my-2 p-4">
+            <p class="h5 mb-4">Projects</p>
+            <div class="d-inline-flex container-fluid">
+                <div class="card p-1 m-1" style="width: 18rem;">
+                    <img src="./assets/hymmnosreader.jpg" class="card-img-top" alt="HymmnosReader Interface">
+                    <div class="card-body">
+                        <p class="h5 card-title">HymmnosReader</p>
+                        <p class="card-text">C# desktop application that pulls from a lexicon source file and builds word objects that can be sorted and filtered.</p>
+                        <a href="https://github.com/SophieYvonneDelahunt/HymmnosReader" class="btn btn-primary">GitHub Repository</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Hobbies Block-->
+        <div id="hobbies" class="border border-dark rounded bg-dark text-light my-2 p-4">
+            <p class="h5 mb-4">Creative Pursuits</p>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>Writing software's not <i>all</i> I do.</p>
+                    <p>I like to spend my free time doing a different kind of writing. Each project is a long-term commitment that I pour my heart into, requiring years of research, planning, creativity, and organisation. Though I do it for me first and foremost, I've never been prouder to create these worlds.</p>
+                </div>
+            </div>
+            <div class="d-inline-flex flex-row justify-content-start container-fluid">
+                <div class="card p-1 m-1" style="width: 18rem;">
+                    <img src="./assets/title_1.png" class="card-img-top" alt="A Steel Path to the Sky">
+                    <div class="card-body">
+                        <p class="h5 card-title">A Steel Path to the Sky</p>
+                        <p class="card-text">2024 - Present<br>Science Fiction</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#title1Modal">Synopsis</button>
+                        <div class="modal fade" id="title1Modal" tabindex="-1" aria-labelledby="title1ModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="title1ModalLabel">A Steel Path to the Sky</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>At the dawn of the twenty-third century, the world is unrecognisable. In the wake of societal collapse and a global mass extinction event, human civilisation has risen from the ashes of the old world with a focus on sustainability and social harmony.</p>
+                                        <p>Seventeen-year-old Taia Sinclair stares up at the cold Vancouver sky on clear nights from the roof of her residential tower, watching spacecraft pass overhead. She dreams of travelling to the stars. Yet her legs—gripped by the rigid steel of a medical exoskeleton—hold her fast. Plagued by a terminal illness, Taia knows that she’ll never live to set foot on another world. Her dream is unattainable. But in her heart, she refuses to let go.</p>
+                                        <p>Elsewhere in the megacity, a man tinkers with cybernetics—a technological dead end. A heavy lift freighter rises into the skies, its crew ignorant of the critical fault in its engines. An eldritch monster forged of circuitry and code plots its escape. These four paths will come to intersect… and Taia doesn’t yet know that her journey is about to begin—one that will see her face questions on what it means to be alive, on where lie the boundaries of humanity, and how much she is willing to sacrifice to see her fervent dream realised.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-1 m-1" style="width: 18rem;">
+                    <img src="./assets/title_2.png" class="card-img-top" alt="Aria of a Falling Sky">
+                    <div class="card-body">
+                        <p class="h5 card-title">Aria of a Falling Sky</p>
+                        <p class="card-text">2017 - 2024<br>Science Fantasy</p>
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#title2Modal">Synopsis</button>
+                        <div class="modal fade" id="title2Modal" tabindex="-1" aria-labelledby="title2ModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="title2ModalLabel">Aria of a Falling Sky</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Asciydria Tower—the ceiling of the world. Broken by time and conflict, it stands as a memorial to its own bloody history. The spire’s upper flanks glitter with ice sheets, its lower reaches swallowed by forests. Beneath the pine boughs, humans gather around their hearths and tell stories, while among the clouds, the nomads of the Sarra clan walk the tower’s myriad paths. And under the silent hymns of the sky, its bones continue to rot.</p>
+                                        <p>The tower will fall—soon.</p>
+                                        <p>Yet a child awakens in the depths of the machine, carrying the weight of the world itself. Can this young android and her sarcastic AI companion climb to the top of the tower in time to save it, or will it all come crashing down around them? Follow Sylphira on her journey to save Asciydria Tower, and learn what it means to be a Tower Administrator.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
     <footer class="bg-dark p-3">
         <div class="text-center">
-            <a class="" href="#top">
+            <a href="#top">
                 <img src="./assets/return-to-top.png" alt="Return to Top" width="40px" height="40px">
             </a>
         </div>
         <div class="container text-center p-3">
-            <a class="btn btn-outline-light btn-floating" href="https://www.linkedin.com/in/sophie-delahunt-72039b2ba/" role="button"></a>
-            <a class="btn btn-outline-light btn-floating" href="https://github.com/SophieYvonneDelahunt" role="button"></a>
+            <a class="btn btn-floating" href="https://www.linkedin.com/in/sophie-delahunt-72039b2ba/" target="_blank" role="button">
+                <img src="./assets/icon_linkedin.png" alt="LinkedIn - Sophie Delahunt" width="20px" height="20px">
+            </a>
+            <a class="btn btn-floating" href="https://github.com/SophieYvonneDelahunt" target="_blank" role="button">
+                <img src="./assets/icon_github.png" alt="GitHub - Sophie Delahunt" width="20px" height="20px">
+            </a>
         </div>
         <div class="text-center">
-            <p class="text-light">Built and Designed by Sophie Delahunt</p>
+            <p class="text-light">Designed by Sophie Delahunt</p>
         </div>
     </footer>
 </body>
